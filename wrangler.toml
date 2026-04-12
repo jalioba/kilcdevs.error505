@@ -1,0 +1,9 @@
+# Cloudflare Pages — конфиг сборки
+# Этот файл нужен только для справки — настройки задаются в дашборде CF Pages
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"

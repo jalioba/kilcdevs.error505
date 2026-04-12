@@ -1,0 +1,51 @@
+.robotWrap {
+  position: relative;
+  margin-bottom: 2.5rem;
+  animation: float 4.5s ease-in-out infinite;
+}
+
+.pulseRing {
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  border: 1px solid rgba(83, 74, 183, 0.45);
+  animation: ring-out 2.8s ease-out infinite;
+}
+
+.pulseRing:nth-child(2) {
+  animation-delay: 0.93s;
+}
+
+.pulseRing:nth-child(3) {
+  animation-delay: 1.86s;
+}
+
+.robotContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.robotContainer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0, 0, 0, 0.08) 3px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+  50% { transform: translateY(-20px) rotate(1.5deg); }
+}
+
+@keyframes ring-out {
+  0% { transform: scale(0.85); opacity: 0.7; }
+  100% { transform: scale(2.4); opacity: 0; }
+}

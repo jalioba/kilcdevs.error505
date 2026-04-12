@@ -1,0 +1,101 @@
+.footer {
+  position: relative;
+  z-index: 10;
+  background: rgba(8, 8, 15, 0.85);
+  border-top: 0.5px solid var(--border);
+  backdrop-filter: blur(16px);
+}
+
+.footerInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footerBrand {
+  display: flex;
+  align-items: center;
+}
+
+.footerLogo {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--purple-hi);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.footerLogoAccent {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.footerSocials {
+  display: flex;
+  gap: 10px;
+}
+
+.socialBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: 0.5px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  text-decoration: none;
+}
+
+.socialBtn:hover {
+  background: rgba(83, 74, 183, 0.2);
+  border-color: rgba(175, 169, 236, 0.35);
+}
+
+.socialBtn svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--muted);
+  stroke: var(--muted);
+}
+
+.footerBottom {
+  border-top: 0.5px solid var(--border);
+  padding: 1.1rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footerBottom p {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--hint);
+}
+
+.footerReqid {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--hint);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 760px) {
+  .footerInner {
+    gap: 2rem;
+  }
+}

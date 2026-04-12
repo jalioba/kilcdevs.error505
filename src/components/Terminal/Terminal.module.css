@@ -1,0 +1,74 @@
+.terminal {
+  background: rgba(10, 10, 20, 0.7);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.4rem;
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+  backdrop-filter: blur(12px);
+}
+
+.tBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.tDot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tDotR { background: #ff5f57; }
+.tDotY { background: #febc2e; }
+.tDotG { background: #28c840; }
+
+.tTitle {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.25);
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 1px;
+}
+
+.tLine {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  line-height: 2;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.tPrompt { color: var(--teal); }
+.tCmd { color: rgba(255, 255, 255, 0.8); white-space: nowrap; }
+.tErr { color: #F0997B; }
+.tOk { color: #5DCAA5; }
+.tDim { color: rgba(175, 169, 236, 0.45); }
+
+/* map type names to CSS Module classes */
+.t-cmd { color: rgba(255, 255, 255, 0.8); white-space: nowrap; }
+.t-err { color: #F0997B; }
+.t-ok { color: #5DCAA5; }
+.t-dim { color: rgba(175, 169, 236, 0.45); }
+.t-cursor {}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background: rgba(175, 169, 236, 0.75);
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

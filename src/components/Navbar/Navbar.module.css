@@ -1,0 +1,93 @@
+.brandBadge {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: rgba(83, 74, 183, 0.12);
+  border: 0.5px solid rgba(175, 169, 236, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 7px 16px;
+  font-size: 30px;
+  letter-spacing: 4px;
+  color: #e4e2f9;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  z-index: 100;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.brandBadge:hover {
+  background: rgba(83, 74, 183, 0.22);
+  border-color: rgba(175, 169, 236, 0.5);
+}
+
+.brandAccent {
+  color: #bfbaef;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.liveBadge {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(216, 90, 48, 0.14);
+  border: 0.5px solid rgba(216, 90, 48, 0.4);
+  border-radius: var(--radius-sm);
+  padding: 5px 12px;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: #F0997B;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  z-index: 100;
+  animation: flicker 6s ease-in-out infinite 2s;
+}
+
+.liveBadge::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #F0997B;
+  margin-right: 7px;
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+
+@media (min-width: 1024px) {
+  .liveBadge {
+    padding: 10px 24px;
+    font-size: 14px;
+    letter-spacing: 3.5px;
+    border-radius: var(--radius-md);
+    border-width: 1px;
+    box-shadow: 0 0 20px rgba(216, 90, 48, 0.15), inset 0 0 12px rgba(216, 90, 48, 0.06);
+  }
+
+  .liveBadge::before {
+    width: 9px;
+    height: 9px;
+    margin-right: 10px;
+    box-shadow: 0 0 8px rgba(240, 153, 123, 0.6);
+  }
+
+  .brandBadge {
+    padding: 8px 18px;
+    font-size: 14px;
+    letter-spacing: 2.5px;
+    border-radius: var(--radius-md);
+  }
+}
+
+@keyframes flicker {
+  0%, 89%, 91%, 93%, 95%, 100% { opacity: 1; }
+  90% { opacity: 0.25; }
+  92% { opacity: 0.8; }
+  94% { opacity: 0.3; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
