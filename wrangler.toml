@@ -1,9 +1,5 @@
-# Cloudflare Pages — конфиг сборки
-# Этот файл нужен только для справки — настройки задаются в дашборде CF Pages
+name = "kilcdevs505"
+compatibility_date = "2026-04-12"
 
-[build]
-  command = "npm run build"
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "20"
+[assets]
+directory = "./dist"
